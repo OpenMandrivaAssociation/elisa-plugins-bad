@@ -5,7 +5,7 @@
 %define release	%mkrel 0.%svn.1
 %else
 %if %pre
-%define release %mkrel 0.%pre.1
+%define release %mkrel 0.%pre.2
 %else
 %define release	%mkrel 1
 %endif
@@ -40,7 +40,7 @@ BuildRequires:	ImageMagick
 BuildRequires:	desktop-file-utils
 BuildRequires:	gstreamer0.10-python
 BuildRequires:	elisa = %{version}
-Requires:	elisa = %{version}
+Requires:	elisa-plugins-good = %{version}
 Suggests:	python-lirc
 Suggests:	python-coherence
 
@@ -65,6 +65,8 @@ standards for plugins) plugins for Elisa.
 %install
 rm -rf %{buildroot}
 python setup.py install --root=%{buildroot} --single-version-externally-managed --compile --optimize=2
+# already in -good
+rm -f %{buildroot}%{py_puresitedir}/elisa/plugins/__init__*
 
 %clean
 rm -rf %{buildroot}
