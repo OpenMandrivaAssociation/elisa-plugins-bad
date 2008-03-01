@@ -1,17 +1,17 @@
 %define debug_package	%{nil}
 %define svn	0
-%define pre	rc1
+%define pre	rc3
 %if %svn
 %define release	%mkrel 0.%svn.1
 %else
 %if %pre
-%define release %mkrel 0.%pre.2
+%define release %mkrel 0.%pre.1
 %else
 %define release	%mkrel 1
 %endif
 %endif
 
-%define fversion	0.3.4.rc1
+%define fversion	%{version}.%{pre}
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
