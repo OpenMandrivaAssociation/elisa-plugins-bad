@@ -1,6 +1,6 @@
 %define debug_package	%{nil}
 %define svn	0
-%define pre	rc3
+%define pre	0
 %if %svn
 %define release	%mkrel 0.%svn.1
 %else
@@ -11,7 +11,7 @@
 %endif
 %endif
 
-%define fversion	%{version}.%{pre}
+%define fversion	%{version}
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
@@ -39,7 +39,7 @@ BuildRequires:	python-twisted
 BuildRequires:	ImageMagick
 BuildRequires:	desktop-file-utils
 BuildRequires:	gstreamer0.10-python
-BuildRequires:	elisa = %{version}
+BuildRequires:	elisa-core = %{version}
 Requires:	elisa-plugins-good = %{version}
 Suggests:	python-lirc
 Suggests:	python-coherence
