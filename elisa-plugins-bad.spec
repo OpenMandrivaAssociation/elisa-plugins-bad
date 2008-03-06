@@ -7,7 +7,7 @@
 %if %pre
 %define release %mkrel 0.%pre.1
 %else
-%define release	%mkrel 2
+%define release	%mkrel 3
 %endif
 %endif
 
@@ -27,8 +27,6 @@ Source0:	http://elisa.fluendo.com/static/download/elisa/%{name}-%{version}.%{pre
 Source0:	http://elisa.fluendo.com/static/download/elisa/%{name}-%{version}.tar.gz
 %endif
 %endif
-# Don't try and check for updates - AdamW 2008/03
-Patch0:		elisa-plugins-bad-0.3.4-disable_updater.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
@@ -61,7 +59,6 @@ standards for plugins) plugins for Elisa.
 %setup -q
 %endif
 %endif
-%patch0 -p1 -b .updater
 
 %build
 
