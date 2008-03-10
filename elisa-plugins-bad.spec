@@ -7,7 +7,7 @@
 %if %pre
 %define release %mkrel 0.%pre.1
 %else
-%define release	%mkrel 4
+%define release	%mkrel 5
 %endif
 %endif
 
@@ -44,6 +44,8 @@ Requires:	elisa-plugins-good = %{version}
 Suggests:	python-lirc
 Suggests:	python-coherence
 Suggests:	python-daap
+# Needed for DAAP plugin
+Suggests:	avahi-python
 
 %description
 Elisa is a project to create an open source cross platform media center 
