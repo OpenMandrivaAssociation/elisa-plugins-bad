@@ -7,7 +7,7 @@
 %if %pre
 %define release %mkrel 0.%pre.1
 %else
-%define release	%mkrel 3
+%define release	%mkrel 4
 %endif
 %endif
 
@@ -43,6 +43,7 @@ BuildRequires:	elisa-core = %{version}
 Requires:	elisa-plugins-good = %{version}
 Suggests:	python-lirc
 Suggests:	python-coherence
+Suggests:	python-daap
 
 %description
 Elisa is a project to create an open source cross platform media center 
