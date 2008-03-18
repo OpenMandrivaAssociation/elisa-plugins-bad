@@ -1,32 +1,36 @@
 %define debug_package	%{nil}
+
+%define rel	1
+
 %define svn	0
 %define pre	0
 %if %svn
-%define release	%mkrel 0.%svn.1
+%define release		%mkrel 0.%svn.%rel
+%define distname	%name-%svn.tar.lzma
+%define dirname		%name
 %else
 %if %pre
-%define release %mkrel 0.%pre.1
+%define release		%mkrel 0.%pre.%rel
+%define distname	%name-%version.%pre.tar.gz
+%define dirname		%name-%version.%pre
 %else
-%define release	%mkrel 5
+%define release		%mkrel %rel
+%define distname	%name-%version.tar.gz
+%define dirname		%name-%version
 %endif
 %endif
 
+# It's the same for releases, but different for pre-releases: please
+# don't remove, even if it seems superfluous - AdamW 2008/03
 %define fversion	%{version}
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.3.4
+Version:	0.3.5
 Release:	%{release}
-%if %svn
+# For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
-Source0:	%{name}-%{svn}.tar.lzma
-%else
-%if %pre
-Source0:	http://elisa.fluendo.com/static/download/elisa/%{name}-%{version}.%{pre}.tar.gz
-%else
-Source0:	http://elisa.fluendo.com/static/download/elisa/%{name}-%{version}.tar.gz
-%endif
-%endif
+Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
@@ -53,15 +57,7 @@ solution. This package contains 'bad' (somehow not up to planned
 standards for plugins) plugins for Elisa.
 
 %prep
-%if %svn
-%setup -q -n %{name}
-%else
-%if %pre
-%setup -q -n %{name}-%{version}.%{pre}
-%else
-%setup -q
-%endif
-%endif
+%setup -q -n %{dirname}
 
 %build
 
