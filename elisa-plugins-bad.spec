@@ -1,6 +1,6 @@
 %define debug_package	%{nil}
 
-%define rel	1
+%define rel	2
 
 %define svn	0
 %define pre	0
@@ -45,6 +45,8 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	gstreamer0.10-python
 BuildRequires:	elisa-core = %{version}
 Requires:	elisa-plugins-good = %{version}
+# Needed for interface code, which is in this package - AdamW 2008/07
+Requires:	python-cssutils
 Suggests:	python-lirc
 Suggests:	python-coherence
 Suggests:	python-daap
