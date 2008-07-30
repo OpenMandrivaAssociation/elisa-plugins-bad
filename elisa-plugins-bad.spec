@@ -26,7 +26,7 @@
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.3.5
+Version:	0.5.3
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -73,6 +73,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{py_puresitedir}/elisa/plugins/*
-%{py_puresitedir}/elisa_plugins_bad-%{fversion}-py%{pyver}.egg-info
-%{py_puresitedir}/elisa_plugins_bad-%{fversion}-py%{pyver}-nspkg.pth
+%{py_puresitedir}/elisa_plugin_*-py%{pyver}.egg-info
+%{py_puresitedir}/elisa_plugin_*-py%{pyver}-nspkg.pth
 
