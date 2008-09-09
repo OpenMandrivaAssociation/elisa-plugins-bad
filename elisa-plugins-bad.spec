@@ -26,7 +26,7 @@
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.5.8
+Version:	0.5.9
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -47,11 +47,12 @@ BuildRequires:	elisa-core = %{version}
 Requires:	elisa-plugins-good = %{version}
 # Needed for interface code, which is in this package - AdamW 2008/07
 Requires:	python-cssutils
-Suggests:	python-lirc
 Suggests:	python-coherence
 Suggests:	python-daap
 # Needed for DAAP plugin
 Suggests:	avahi-python
+# Needed for yes.fm support
+Suggests:	python-simplejson
 
 %description
 Elisa is a project to create an open source cross platform media center 
