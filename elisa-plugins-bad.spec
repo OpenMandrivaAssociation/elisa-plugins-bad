@@ -26,7 +26,7 @@
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.5.15
+Version:	0.5.16.1
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -46,8 +46,10 @@ BuildRequires:	python-twisted
 BuildRequires:	ImageMagick
 BuildRequires:	desktop-file-utils
 BuildRequires:	gstreamer0.10-python
-BuildRequires:	elisa-core = %{version}
-Requires:	elisa-plugins-good = %{version}
+#BuildRequires:	elisa-core = %{version}
+BuildRequires:	elisa-core = 0.5.16
+#Requires:	elisa-plugins-good = %{version}
+Requires:	elisa-plugins-good = 0.5.16
 # Needed for interface code, which is in this package - AdamW 2008/07
 Requires:	python-cssutils
 Suggests:	python-coherence
