@@ -26,7 +26,7 @@
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.5.18
+Version:	0.5.19
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -64,7 +64,7 @@ standards for plugins) plugins for Elisa.
 
 %prep
 %setup -q -n %{dirname}
-%patch0 -p1 -b .unneeded
+#patch0 -p1 -b .unneeded
 
 %build
 
