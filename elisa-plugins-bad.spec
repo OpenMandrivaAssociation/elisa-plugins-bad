@@ -26,14 +26,14 @@
 
 Summary:	'Bad' plugins for the Elisa media center
 Name:		elisa-plugins-bad
-Version:	0.5.19
+Version:	0.5.20
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
 Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
-# Disable irrelevant plugins (now we can't do it in core...) - AdamW
+# Disable irrelevant plugin (now we can't do it in core...) - AdamW
 # 2008/10
-Patch0:		elisa-plugins-bad-0.5.15-unneeded.patch
+Patch0:		elisa-plugins-bad-0.5.20-unneeded.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
@@ -64,7 +64,7 @@ standards for plugins) plugins for Elisa.
 
 %prep
 %setup -q -n %{dirname}
-#patch0 -p1 -b .unneeded
+%patch0 -p1 -b .unneeded
 
 %build
 
