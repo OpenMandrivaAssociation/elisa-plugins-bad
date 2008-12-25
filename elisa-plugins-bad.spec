@@ -33,7 +33,7 @@ Release:	%{release}
 Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
 # Disable irrelevant plugin (now we can't do it in core...) - AdamW
 # 2008/10
-Patch0:		elisa-plugins-bad-0.5.20-unneeded.patch
+Patch0:		elisa-plugins-bad-0.5.22-unneeded.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
