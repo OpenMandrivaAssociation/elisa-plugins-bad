@@ -1,6 +1,6 @@
 %define debug_package	%{nil}
 
-%define rel	1
+%define rel	2
 
 %define svn	0
 %define pre	0
@@ -34,6 +34,8 @@ Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
 # Disable irrelevant plugin (now we can't do it in core...) - AdamW
 # 2008/10
 Patch0:		elisa-plugins-bad-0.5.22-unneeded.patch
+# From Debian: use system Coherence - AdamW 2009/02
+Patch1:		http://patch-tracking.debian.net/patch/series/dl/elisa-plugins-bad/0.5.28-1/40_use-system-coherence.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
@@ -65,6 +67,7 @@ standards for plugins) plugins for Elisa.
 %prep
 %setup -q -n %{dirname}
 %patch0 -p1 -b .unneeded
+%patch1 -p1 -b .sys_coherence
 
 %build
 
