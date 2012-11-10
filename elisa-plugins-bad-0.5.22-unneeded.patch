@@ -1,0 +1,10 @@
+--- elisa-plugins-bad-0.5.22/setup.py	2008-12-15 04:11:26.000000000 -0800
++++ elisa-plugins-bad-0.5.22/setup.py.new	2008-12-24 23:09:54.000000000 -0800
+@@ -16,7 +16,6 @@
+                'gstreamer',
+                'http_client',
+                'ipod',
+-               'osso',
+                'pigment',
+                'poblesec',
+                'rss',
