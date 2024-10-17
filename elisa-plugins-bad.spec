@@ -38,7 +38,7 @@ Patch0:		elisa-plugins-bad-0.5.22-unneeded.patch
 Patch1:		http://patch-tracking.debian.net/patch/series/dl/elisa-plugins-bad/0.5.28-1/40_use-system-coherence.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
-URL:		http://elisa.fluendo.com/
+URL:		https://elisa.fluendo.com/
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python
